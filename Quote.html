@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Click for Quote</title>
+</head>
+
+<body>
+    <style>
+        :root {
+            --font-title: 24px;
+            --grad-start: 280;
+            --grad-end: 40;
+        }
+
+        body {
+            background: linear-gradient(135deg, hsl(var(--grad-start), 100%, 75%), hsl(var(--grad-end), 100%, 50%)) no-repeat fixed;
+            background-size: cover;
+
+            margin: 800px;
+        }
+
+        button {
+            display: inline-block;
+            background-color: black;
+            border-radius: 10px;
+            border: 4px double #cccccc;
+            color: #eeeeee;
+            text-align: center;
+            font-size: 28px;
+            width: 200px;
+            -webkit-transition: all 0.5s;
+            -moz-transition: all 0.5s;
+            -o-transition: all 0.5s;
+            transition: all 0.5s;
+            cursor: pointer;
+            margin: 5px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            position: absolute;
+        }
+
+        button span {
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+            transition: 0.5s;
+        }
+
+        button span:after {
+            content: '\00bb';
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            right: -20px;
+            transition: 0.5s;
+        }
+
+        button:hover {
+            background-color: #f7c2f9;
+            color: black;
+        }
+
+        button:hover span {
+            padding-right: 25px;
+        }
+
+        button:hover span:after {
+            opacity: 1;
+            right: 0;
+        }
+    </style>
+
+    <script>
+        function thoughts_authors() {
+
+            var authors = new Array()
+            authors[0] = " Albert Einstein";
+            authors[1] = "Frank Zappa";
+            authors[2] = "Marcus Tullius Cicero";
+            authors[3] = "Mahatma Gandhi";
+
+            var quotes = new Array()
+            quotes[0] = "Two things are infinite: the universe and human stupidity; and I'm not sure about the      universe.";
+            quotes[1] = "So many books, so little time.";
+            quotes[2] = "A room without books is like a body without a soul.";
+            quotes[3] = "Be the change that you wish to see in the world.";
+
+
+            index = Math.floor(Math.random() * quotes.length);
+
+            alert(quotes[index] + "\n" + "-" + authors[index]);
+        }
+
+        const w = window.innerWidth;
+        const p = document.querySelector("p");
+
+        const getPercentX = x => Math.round((x / w) * 360);
+        const styleEl = document.documentElement.style;
+        const setStyle = styleEl.setProperty.bind(styleEl);
+
+        const updateGradient = percentX => {
+            const gradStart = percentX;
+            const gradEnd = (percentX + 120) % 360;
+
+            setStyle("--grad-start", gradStart);
+            setStyle("--grad-end", gradEnd);
+        };
+
+        document.addEventListener("mousemove", e => {
+            updateGradient(getPercentX(e.clientX));
+        });
+
+        document.addEventListener("touchmove", e => {
+            updateGradient(getPercentX(e.touches[0].screenX));
+        });
+    </script>
+
+    </script>
+
+    <button onclick="thoughts_authors()">Click here for a quote</button>
+
+</body>
+
+</html>
