@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+</head>
+<style>
+    body {
+        background-color: black;
+        background: url("https://www.theappsense.com/wp-content/uploads/2017/05/portfolio.jpg") no-repeat fixed;
+        background-size: cover;
+    }
+
+    h1 {
+        color: white;
+        margin: auto;
+        line-height: 140%;
+        font-size: 50pt;
+
+    }
+
+    .header {
+        display: inline-block;
+        margin: 50px;
+        padding: 20rem;
+        text-align: left;
+        max-width: auto;
+        overflow: hidden;
+        position: relative;
+        max-width: 0 auto;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    p {
+        color: white
+    }
+
+    .about {
+        font-size: 50pt;
+        font-family: 'impact';
+        text-align: center;
+    }
+
+    p {
+        font-size: 20pt;
+        font-family: Arial, Helvetica, sans-serif;
+        display: block;
+        text-align: center;
+    }
+
+    .para {
+        padding: 15rem
+    }
+
+    .websiteBackground {
+
+        background-size: cover;
+    }
+
+    .context {
+        width: 100%;
+        position: absolute;
+        top: 0;
+    }
+
+    .area {
+        background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8);
+        width: 100%;
+        height: 100vh;
+    }
+
+    .circles {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    .circles li {
+        position: absolute;
+        display: block;
+        list-style: none;
+        width: 20px;
+        height: 20px;
+        background: white;
+        animation: animate 25s linear infinite;
+        bottom: -150px;
+    }
+
+    .circles li:nth-child(1) {
+        left: 25%;
+        width: 80px;
+        height: 80px;
+        animation-delay: 0s;
+    }
+
+
+    .circles li:nth-child(2) {
+        left: 10%;
+        width: 20px;
+        height: 20px;
+        animation-delay: 2s;
+        animation-duration: 12s;
+    }
+
+    .circles li:nth-child(3) {
+        left: 70%;
+        width: 20px;
+        height: 20px;
+        animation-delay: 4s;
+    }
+
+    .circles li:nth-child(4) {
+        left: 40%;
+        width: 60px;
+        height: 60px;
+        animation-delay: 0s;
+        animation-duration: 18s;
+    }
+
+    .circles li:nth-child(5) {
+        left: 25%;
+        width: 80px;
+        height: 80px;
+        animation-delay: 0s;
+    }
+
+
+    .circles li:nth-child(6) {
+        left: 10%;
+        width: 20px;
+        height: 20px;
+        animation-delay: 2s;
+        animation-duration: 12s;
+    }
+
+    .circles li:nth-child(7) {
+        left: 70%;
+        width: 20px;
+        height: 20px;
+        animation-delay: 4s;
+    }
+
+    .circles li:nth-child(8) {
+        left: 40%;
+        width: 60px;
+        height: 60px;
+        animation-delay: 0s;
+        animation-duration: 18s;
+    }
+
+    .circles li:nth-child(9) {
+        left: 25%;
+        width: 80px;
+        height: 80px;
+        animation-delay: 0s;
+    }
+
+
+    .circles li:nth-child(10) {
+        left: 10%;
+        width: 20px;
+        height: 20px;
+        animation-delay: 2s;
+        animation-duration: 12s;
+    }
+
+    .circles li:nth-child(11) {
+        left: 70%;
+        width: 20px;
+        height: 20px;
+        animation-delay: 4s;
+    }
+
+    .circles li:nth-child(12) {
+        left: 40%;
+        width: 60px;
+        height: 60px;
+        animation-delay: 0s;
+        animation-duration: 18s;
+    }
+
+    .circles li:nth-child(13) {
+        left: 25%;
+        width: 80px;
+        height: 80px;
+        animation-delay: 0s;
+    }
+
+
+    .circles li:nth-child(14) {
+        left: 10%;
+        width: 20px;
+        height: 20px;
+        animation-delay: 2s;
+        animation-duration: 12s;
+    }
+
+    .circles li:nth-child(15) {
+        left: 70%;
+        width: 20px;
+        height: 20px;
+        animation-delay: 4s;
+    }
+
+    .circles li:nth-child(16) {
+        left: 40%;
+        width: 60px;
+        height: 60px;
+        animation-delay: 0s;
+        animation-duration: 18s;
+    }
+
+    .circles li:nth-child(17) {
+        left: 25%;
+        width: 80px;
+        height: 80px;
+        animation-delay: 0s;
+    }
+
+
+    .circles li:nth-child(18) {
+        left: 10%;
+        width: 20px;
+        height: 20px;
+        animation-delay: 2s;
+        animation-duration: 12s;
+    }
+
+    .circles li:nth-child(19) {
+        left: 70%;
+        width: 20px;
+        height: 20px;
+        animation-delay: 4s;
+    }
+
+    .circles li:nth-child(20) {
+        left: 40%;
+        width: 60px;
+        height: 60px;
+        animation-delay: 0s;
+        animation-duration: 18s;
+    }
+
+    @keyframes animate {
+
+        0% {
+            transform: translateY(0) rotate(0deg);
+            opacity: 1;
+            border-radius: 0;
+        }
+
+        100% {
+            transform: translateY(-1000px) rotate(720deg);
+            opacity: 0;
+            border-radius: 50%;
+        }
+    }
+    .resume{
+        color: red;
+    }
+</style>
+
+<body>
+    <div class="header">
+        <h1>I design & </h1>
+        <h1>develop digital products</h1>
+    </div>
+    <div class="para">
+        <p class="about">
+            About
+        </p>
+        <p>
+            Hi, I'm Beth. I'm a self-taught full-stack web developer with just a little under one year of experience.
+        </p>
+        <p>
+            When I first discovered web development I realized it was the perfect fit for me. I've always had a creative
+            as well as a logical side to me and web development allows me to utilize both sides.
+        </p>
+        <p>
+            I am currently based in Dallas, TX and working as a freelancer while learning additional languages.
+            </p>
+            <p>
+                 <a  class="resume" href="C:\Users\Strem\Downloads\Amare, Betelehem - Resume .docx.pdf"> Resume.pdf</a>
+            </p>
+    </div>
+    <div class="websiteBackground">
+    <div class="context">
+        <div class="area">
+            <ul class="circles">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>
